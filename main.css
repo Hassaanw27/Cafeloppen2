@@ -1071,7 +1071,7 @@ h5 {
 /* Floater i bunden på alle sider */
 .sticky {
   position: fixed;
-  top: 80vh;
+  bottom: 0;
   width: 100vw;
   height: 8vh;
   display: grid;
