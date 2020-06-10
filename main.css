@@ -1,0 +1,1885 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  margin: 0px;
+}
+
+/*                                                                        Mobile Start                                              */ 
+
+body .logo {
+  position: fixed;
+  top: 30px;
+  left: 34px;
+  z-index: 6;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  height: 4.2vh;
+}
+.cookietitle{
+  width: 70vw;
+  margin: auto;
+  padding: 48px 0px;
+
+  font-family: 'Open Sans'
+}
+
+.cookiepolicy{
+  text-align: left;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+/* Genbrug af grid */
+.nowrap{
+  width: 70vw;
+  margin: auto;
+  font-family: 'Open Sans';
+
+}
+.cookies h3{
+  font-size: 12pt;
+  margin: 0;
+  font-weight: bold;
+}
+
+/*forside*/
+.ulist {
+  list-style: none;
+}
+
+body .logo>span {
+  text-transform: none;
+  opacity: .5;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+/* Burger bar check box Start */
+body #navtoggle {
+  visibility: hidden;
+}
+
+
+body #navtoggle+label {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  height: 25px;
+  width: 25px;
+  z-index: 5;
+}
+
+body #navtoggle+label span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  display: block;
+  background: #020304;
+  transition: .5s;
+}
+
+/* Burger bar streger start */
+
+body #navtoggle+label span:first-child {
+  top: 3px;
+}
+
+body #navtoggle+label span:last-child {
+  top: 22px;
+}
+
+body label:hover {
+  cursor: pointer;
+}
+
+body #navtoggle:checked+label span {
+  opacity: 0;
+  top: 50%;
+}
+
+body #navtoggle:checked+label span:first-child {
+  opacity: 1;
+  transform: rotate(405deg);
+}
+
+body #navtoggle:checked+label span:last-child {
+  opacity: 1;
+  transform: rotate(-405deg);
+}
+
+/* Burger bar streger Slut */
+
+/* Burger bar åben start */
+
+body #navtoggle~.navbg {
+  background: #fff8e9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80px;
+  z-index: 3;
+  transition: .2s;
+  transition-delay: .5s;
+  overflow: hidden;
+}
+
+body #navtoggle~.navbg>.ulist {
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  right: 20%;
+  padding: 0;
+}
+/* Burger bar åben slut */
+
+/* Burger bar baggrund animation start */
+body #navtoggle~.navbg>.ulist>.listitem {
+  opacity: 0;
+  transition: .5s;
+  transition-delay: 0s;
+}
+
+body #navtoggle~.navbg>.ulist>.listitem>a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #020304;
+  font-weight: 700;
+  font-family: 'Open Sans';
+  display: block;
+  padding: 18px 30px;
+}
+
+body #navtoggle:checked~.navbg {
+  height: 100%;
+  transition-delay: 0s;
+}
+
+body #navtoggle:checked~.navbg>.ulist>.listitem {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+/* Burger bar baggrund animation Slut */
+
+/* Skubber forside elementer ned så man kan se billedet */
+.topbar {
+  height: 80px;
+  color: red;
+}
+ 
+
+.frontimgcontainer {
+  width: 100vw;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  background-image: url('img/frontimage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fronttext {
+  color: white;
+  font-family: 'Open Sans';
+  font-weight: normal;
+  margin-top: 250px;
+  padding: 48px 24px;
+  font-size: 20pt;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* Skal slettes 
+.pure-material-button-contained {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  width: 85%;
+  height: 108px;
+  text-transform: uppercase;
+  color: white;
+  background-image: url("img/foodphotograph.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  font-family: 'Open Sans';
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 108px;
+  overflow: hidden;
+  outline: none;
+  transition: box-shadow 0.2s;
+  text-decoration: none;
+  margin: 12px 0px;
+}
+*/
+.nav {
+  display: none;
+}
+
+/* Overlay */
+.pure-material-button-contained::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Ripple */
+.pure-material-button-contained::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  padding: 50%;
+  width: 32px;
+  /* Safari */
+  height: 32px;
+  /* Safari */
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 1s, transform 0.5s;
+}
+
+/* Hover, Focus */
+.pure-material-button-contained:hover,
+.pure-material-button-contained:focus {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.pure-material-button-contained:hover::before {
+  opacity: 0.08;
+}
+
+.pure-material-button-contained:focus::before {
+  opacity: 0.24;
+}
+
+.pure-material-button-contained:hover:focus::before {
+  opacity: 0.3;
+}
+
+/* Active */
+.pure-material-button-contained:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.pure-material-button-contained:active::after {
+  opacity: 0.32;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0s;
+}
+
+/* Disabled */
+.pure-material-button-contained:disabled {
+  box-shadow: none;
+  cursor: initial;
+}
+
+.pure-material-button-contained:disabled::before {
+  opacity: 0;
+}
+
+.pure-material-button-contained:disabled::after {
+  opacity: 0;
+}
+ 
+/* Flaoter Book bord */
+.lftbtn {
+  background-color: #E8A110;
+  border-top: 0px;
+  transition: all 200ms ease-in;
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+}
+
+.js-lftbtn {
+  border-top: 1px solid grey;
+}
+
+/* Floater Menu */
+.rgtbtn {
+  color: black;
+  background-color: #fff8e9;
+  border-top: 0px;
+  transition: all 200ms ease-in;
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+}
+
+.js-rgtbtn {
+  border-top: 1px solid grey;
+}
+
+
+/* Flaoter Book Bord*/
+.bordbooking {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  height: 100%;
+  line-height: 8vh;
+  font-weight: bold;
+}
+
+/* Flaoter menu*/
+
+.takeaway {
+  color: black;
+  text-decoration: none;
+  font-weight: normal;
+  height: 100%;
+  line-height: 8vh;
+  font-weight: bold;
+}
+
+/* Google Sheets Blog Start*/
+.updatetxt {
+  width: 85vw;
+  height: 400px;
+  text-align: center;
+  margin: auto;
+  border-radius: 4pt;
+}
+
+#titletxt {
+  margin: 0px;
+  color: black;
+  padding: 20px 0px;
+  text-transform: uppercase;
+  font-family: 'Open Sans';
+  font-size: 24px;
+}
+
+#subtxt {
+  margin: 0px;
+  color: black;
+  padding: 20px 20px;
+  font-family: 'Open Sans';
+  font-size: 12pt;
+}
+
+.sheetsstyling{
+  font-family: 'Open Sans';
+  margin: 12px 0px;
+}
+/* Google Sheets Blog Slut*/
+
+
+
+/* Baggrunds farve */
+.red {
+  background-color: #fffff0;
+}
+
+.start {
+  height: 550px;
+}
+
+.menubutton {
+  text-decoration: none;
+  color: white;
+  background-color: #E8A110;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn {
+  text-align: center;
+}
+
+footer {
+  margin-top: 0px;
+  background-color: #fff8e9;
+  width: 100vw;
+  text-align: center;
+  display: block;
+}
+
+.fødevarestyrelsen {
+  width: 120px;
+  margin: auto;
+  font-size: 8pt;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 24px;
+}
+
+.fødevarestyrelsen img {
+  width: 80px;
+  padding-bottom: 0px;
+}
+
+.footertxt {
+  color: black;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 12pt;
+  margin: 0;
+}
+
+.footerheading {
+  color: black;
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-size: 14pt;
+  padding: 36px 24px 0px 24px;
+  margin-top: 0;
+}
+
+.sitemap {
+  color: black;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 12pt;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.sitemap-links {
+  color: black;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 0px 24px;
+}
+
+.sitelinks {
+  text-decoration: none;
+  color: black;
+  line-height: 36pt;
+  text-transform: uppercase;
+}
+
+.cpright {
+  font-family: 'Open Sans';
+  font-weight: lighter;
+  font-size: 8pt;
+  margin: 0;
+  padding-bottom: 75px;
+}
+
+.tel {
+  text-decoration: none;
+  color: black;
+  margin-right: 7px;
+}
+
+.addresstxt {
+  text-decoration: none;
+  color: black;
+}
+
+.instawidget {
+  width: 100%;
+  margin: auto;
+  margin-top: 24px;
+  height: auto;
+  text-align: center;
+  background-color: rgba(232, 161, 16, 0.5);
+}
+
+.slideshow {
+  width: 100vw;
+}
+
+.swiper-container {
+  width: 100% !important;
+  height: 300px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide billeder horisontalt */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.slideshowimages {
+  width: 100vw;
+}
+
+/* Facebook, Lightwidget, Google Maps */
+iframe {
+  padding-bottom: 24px;
+}
+
+/* Følg os */
+.foelgos {
+  padding: 20px 20px 0px 20px;
+  font-family: 'Open Sans';
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: white;
+}
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+
+/* forside end */
+/*kontakt Start*/
+body #navtoggle {
+  visibility: hidden;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 8px;
+  margin-top: 64px;
+}
+
+h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin: 0;
+  font-style: light;
+}
+
+.mailsection {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  text-align: center;
+}
+
+.kontakt {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  text-align: center;
+}
+
+.kontakt h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  font-size: 40px;
+  margin: 1em 0;
+}
+
+.kontakt p {
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.maps {
+  text-align: center;
+  padding: 1em;
+}
+
+.infosect {
+  text-align: center;
+  font-family: 'Open Sans';
+}
+
+#right {
+  margin-bottom: 48px;
+}
+
+#left {
+  margin-bottom: 48px;
+}
+
+#middle {
+  margin-bottom: 48px;
+}
+
+.maintitle {
+  font-family: 'Open Sans';
+  margin-bottom: 48px;
+  font-size: 36pt;
+  text-align: center;
+}
+
+.embedmaps {}
+
+/*kontakt end */
+/*menu start*/
+h5 {
+  margin-top: 0;
+  margin: 0;
+}
+
+
+.pricelistcoffee h5 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.coffeesection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "drk1 ep""drk2 am""drk3 mc""drk4 cl""drk5 cp""drk6 cm""drk7 cot""drk8 vc";
+}
+.sectiontitle {
+  font-size: 14pt;
+  margin-top: 84px;
+  text-transform:  uppercase;
+}
+.liststyling {
+  list-style-type: none;
+  font-size: 12pt;
+  padding: 0;
+}
+
+.cdrink {
+  width: 70vw;
+  margin: auto;
+}
+
+/* Drikke vare forkortelser (ep=Espresso)*/
+
+.ep {
+  grid-area: ep;
+}
+
+.am {
+  grid-area: am;
+}
+
+.mc {
+  grid-area: mc;
+}
+
+.cl {
+  grid-area: cl;
+}
+
+.cp {
+  grid-area: cp;
+}
+
+.cm {
+  grid-area: cm;
+}
+
+.cot {
+  grid-area: cot;
+}
+
+.vc {
+  grid-area: vc;
+}
+
+.drk1 {
+  grid-area: drk1;
+}
+
+.drk2 {
+  grid-area: drk2;
+}
+
+.drk3 {
+  grid-row: 4/5;
+}
+
+.drk4 {
+  grid-area: drk4;
+}
+
+.drk5 {
+  grid-area: drk5;
+}
+
+.drk6 {
+  grid-area: drk6;
+}
+
+.drk7 {
+  grid-area: drk7;
+}
+
+.drk8 {
+  grid-area: drk8;
+}
+
+.dish {
+  padding-top: 0px;
+  max-width: 75%;
+  text-align: center;
+  font-size: 18pt;
+  margin-top: 48px;
+}
+
+.price {
+  margin-top: 10px;
+  font-weight: bold;
+  bottom: 0px;
+  width: 100%;
+}
+
+h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+#categories {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.backplate {
+  height: 120px;
+  top: 0;
+}
+
+.textsection1 {
+  margin: auto;
+  width: 80vw;
+  display: grid;
+  margin-bottom: 64px;
+}
+
+.categorystyling {
+  border: 1.5px solid black;
+  padding: 8px 12px;
+  font-family: 'Open Sans';
+  font-size: 8pt;
+  text-decoration: none;
+  color: black;
+  margin: 1px;
+  text-align: center;
+  background-color: none;
+}
+
+.categorystyling2 {
+  background-color: green;
+}
+
+
+.foodimg {
+  width: 100%;
+}
+
+.menuitems {
+  text-align: center;
+  font-family: 'Open Sans';
+}
+
+.springrolls {
+  font-weight: bold;
+  font-size: 20pt;
+  padding-top: 36px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#forretter {
+  font-weight: bold;
+  font-size: 20pt;
+  padding-top: 36px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.js-rollsstyling {
+  background-color: red;
+}
+
+.rollsstyling {
+  border: 1.5px solid black;
+  padding: 8px 12px;
+  font-family: 'Open Sans';
+  font-size: 8pt;
+  text-decoration: none;
+  color: black;
+  margin: 1px;
+  text-align: center;
+  background-color: none;
+}
+
+.menutitles {
+  font-weight: bold;
+  font-size: 20pt;
+  padding-top: 36px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.menudesc {
+  font-weight: lighter;
+  font-size: 12pt;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.menuheadersmall {
+  font-weight: normal;
+  font-size: 12pt;
+  margin: 0;
+}
+
+.titel {
+  font-family: 'Open Sans';
+  font-size: 16pt;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.dish {
+  padding-top: 36px;
+  max-width: 75%;
+  margin: auto;
+}
+
+.choosebetween {
+  font-size: 8pt;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.active {
+  background-color: #E8A110;
+  color: white;
+}
+
+/*OM OS starter her*/
+.aboutus {
+  width: 80%;
+  margin: auto;
+  font-weight: lighter;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  font-family: 'Open Sans';
+  text-align: center;
+  width: 80%;
+  border-radius: 4px;
+  color: black;
+}
+}
+
+.udfyld {
+  width: 80%;
+  margin: auto;
+  font-weight: lighter;
+  padding: 12px;
+  padding-top: 24px;
+}
+
+.report {
+  text-align: center;
+  padding-top: 65px;
+}
+
+.smiley-link {
+  padding-top: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  text-align: center;
+}
+
+.frame {
+  width: 80%;
+  margin: auto;
+  border-radius: 4px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.framesecond {
+  width: 80%;
+  margin: auto;
+  border-radius: 4px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.fødevaresmiley {
+  text-align: center;
+}
+
+.fødevaresecondlink {
+  width: 120px;
+  margin: auto;
+  font-size: 8pt;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 24px;
+}
+
+.fødevaresecondlinkimg {
+  width: 120px;
+  margin: auto;
+  font-size: 8pt;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.aboutus {
+  width: 80%;
+  font-weight: lighter;
+}
+
+.aboutusmaintext {
+  font-family: 'Open Sans';
+  padding: 0px 24px;
+}
+
+#history {
+  grid-column: 1/2;
+  text-align: center;
+}
+
+#kitchen {
+  grid-column: 2/3;
+  text-align: center;
+}
+
+.titel {
+  font-size: 20pt;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+/*OM OS slutter her*/
+/*booking starter her*/
+
+/* Email */
+.emcontact {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 24px;
+}
+
+.spacer {
+  width: 100vw;
+  height: 100px;
+}
+
+/*Catering starter her*/
+.sendmail {
+  width: 80%;
+  margin: auto;
+  font-family: 'Open Sans';
+}
+
+/* Email formular*/
+
+.nameinput, .emailinput, .phoneinput {
+  width: 90%;
+  border: 1px solid lightgrey;
+  padding: 12px;
+}
+
+#msg-box {
+  max-width: 100vw;
+  border-color: 5px solid;
+}
+
+.sub-btn {
+  background-color: #E8A110;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 84px;
+  height: 36px;
+  margin: 24px;
+}
+
+.widesection {
+  display: block;
+}
+/* Floater i bunden på alle sider */
+.sticky {
+  position: fixed;
+  top: 80vh;
+  width: 100vw;
+  height: 8vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 14pt;
+  text-transform: capitalize;
+  text-transform: uppercase;
+  z-index: 2;
+  display: inline-flex;
+}
+
+.block{
+  display: block;
+}
+
+/*                                                                        Mobile Slut                                              */
+
+/*                                                                        DESKTOP START                                              */                     
+@media only screen and (min-width: 950px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: left;
+    padding-top: 30px;
+  }
+
+  /* Skjuler sticky på desktop */
+  .sticky {
+    display: none;
+  }
+
+
+  /* Burger baren Skjules på desktop */
+  .ulist, .listitem {
+    display: none;
+  }
+
+  label {
+    display: none;
+  }
+
+  .fronttext {
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: normal;
+    margin-top: 250px;
+    padding: 48px 24px;
+    font-size: 48pt;
+    text-align: center;
+  }
+
+  .nav {
+    display: block;
+    position: relative;
+    bottom: 0;
+    z-index: 4;
+    margin: auto;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    width: 100%;
+    height: 100px;
+    text-align: end;
+  }
+
+  .desktoplogo {
+    width: 100vw;
+    text-align: center;
+    height: 40px;
+    margin-top: 24px;
+  }
+
+  .nav-link {
+    padding: 0px 12px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .desktopnavbar {
+    list-style-type: none;
+    display: inline-flex;
+    margin-top: 38px;
+    text-transform: uppercase;
+  }
+
+  .topbar {
+    height: 100px;
+    color: red;
+  }
+
+
+
+  body .logo {}
+
+  body #navtoggle~.navbg {
+    background: #fff8e9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 3;
+    transition: .2s;
+    transition-delay: .5s;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .widesection {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 100vw;
+  }
+
+  .updatetxt {
+    max-width: 80%;
+    height: 400px;
+    text-align: center;
+    border-radius: 4pt;
+    grid-column: 1/3;
+    margin: 20px 50px 20px 20px;
+    justify-self: center;
+
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .slideshow {
+    width: 80%;
+    grid-column: 3/5;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .slideshow div {
+    height: 400px;
+  }
+
+  .frontimgcontainer {
+    width: 100vw;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    background-image: url('img/frontimage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+  }
+
+  .start {
+    height: 800px;
+  }
+
+  .menubutton {
+    text-decoration: none;
+    color: white;
+    background-color: #E8A110;
+    padding: 12px 36px;
+    border-radius: 4px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16pt;
+  }
+
+  .btn {
+    padding-top: 100px;
+    bottom: 100px;
+    text-align: center;
+  }
+
+  .slideshowimages {
+    width: 100%;
+  }
+/* Prikker under galleri */
+  .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    top: 350px !important;
+  }
+
+  .sitemap {
+    color: black;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 12pt;
+    padding-bottom: 24px;
+    margin-top: 0px;
+  }
+
+
+
+  .sitemap-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 10px;
+    grid-template-areas: "First Second";
+  }
+
+  .Second {
+    grid-area: Second;
+    font-size: 10pt;
+  }
+
+  .First {
+    grid-area: First;
+    font-size: 10pt;
+  }
+
+  .cpright {
+    grid-column: 1/6;
+    text-align: center;
+  }
+
+  .sitelinks {
+    text-decoration: none;
+    color: black;
+    line-height: 24pt;
+    text-transform: uppercase;
+  }
+
+  /*Kontakt desktop start*/
+  .infosect {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .tel {
+    grid-column: 2/3;
+  }
+
+  #right {
+    grid-column: 3/4;
+    padding: 36px;
+  }
+
+  #left {
+    grid-column: 1/2;
+    text-align: center;
+    padding: 36px;
+  }
+
+  #middle {
+    grid-column: 2/3;
+    padding: 36px;
+    background-color: rgba(232, 161, 16, 0.5);
+    border-radius: 4px;
+    color: black;
+  }
+
+  .titel {
+    font-size: 20pt;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  /*kontakt desktop slutter her*/
+  /*om desktop starter herunder */
+  section .aboutus {
+    width: 80%;
+    font-weight: lighter;
+    padding: 24px;
+    grid-column: 1/2;
+  }
+
+  .aboutusmaintext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Open Sans';
+    padding: 0px 24px;
+  }
+
+  #history {
+    grid-column: 1/2;
+    text-align: center;
+  }
+
+  #kitchen {
+    grid-column: 2/3;
+    text-align: center;
+  }
+
+  .socialmedia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 48px;
+  }
+
+  .frame {
+    background-color: #fff8e9;
+    width: 80%;
+    margin: auto;
+    border-radius: 4px;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .framesecond {
+    background-color: rgba(232, 161, 16, 0.5);
+    width: 80%;
+    margin: auto;
+    border-radius: 4px;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .instawidget {
+    width: 100%;
+    margin: auto;
+    margin-top: 24px;
+    height: auto;
+    text-align: center;
+    background-color: rgba(232, 161, 16, 0.5);
+  }
+
+  .someinst {
+    width: 350px;
+  }
+
+  .inst .framesecond .smiley-link {
+    color: white;
+  }
+
+  /*om os desktop slutter herunder */
+  /*catering desktop starter herunder */
+  .cateringmain {
+    text-decoration: none;
+    font-family: 'Open Sans';
+    text-align: center;
+    grid-column: 2/3;
+  }
+
+  .udfyld {
+    width: 80%;
+    margin: auto;
+    font-weight: lighter;
+    margin-bottom: 24px;
+  }
+
+  .conferencetekst {
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    text-align: center;
+    background-color: rgba(232, 161, 16, 0.5);
+    width: 80%;
+    border-radius: 4px;
+  }
+
+  .emcontact {
+    text-decoration: none;
+    margin-bottom: 24px;
+  }
+
+  .sub-btn {
+    background-color: #E8A110;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 106px;
+    height: 36px;
+  }
+
+  /*catering desktop slutter herunder */
+  /*menu desktop starter herunder */
+  #categories {
+    display: none;
+  }
+
+  /* Kategori baggrund */
+
+  .backplate {
+    display: none;
+  }
+
+  .foodimg {
+    width: 80vw;
+  }
+
+  .sectiontitle {
+    font-size: 24pt;
+    margin-top: 0px;
+  }
+
+  .textsection1 {
+    margin: auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  .textsection2 {
+    margin: auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  .textsection3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px 1px;
+    margin: auto;
+    width: 70vw;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    grid-template-areas: ". . . . . ."". . . . . .";
+  }
+
+  .textsection4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    margin: auto;
+    width: 70vw;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    grid-template-areas: ". . . . . ."". . . . . .";
+  }
+
+  .textsection5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1px 1px;
+    margin: auto;
+    width: 70vw;
+    margin-bottom: 64px;
+    grid-template-areas: "wine1 wine5 wine9""wine2 wine6 wine10""wine3 wine7 wine11""wine4 wine8 wine12";
+  }
+
+  .wine1 {
+    grid-area: wine1;
+  }
+
+  .wine2 {
+    grid-area: wine2;
+  }
+
+  .wine3 {
+    grid-area: wine3;
+  }
+
+  .wine4 {
+    grid-area: wine4;
+  }
+
+  .wine5 {
+    grid-area: wine5;
+  }
+
+  .wine6 {
+    grid-area: wine6;
+  }
+
+  .wine7 {
+    grid-area: wine7;
+  }
+
+  .wine8 {
+    grid-area: wine8;
+  }
+
+  .wine12 {
+    grid-area: wine12;
+  }
+
+  .wine11 {
+    grid-area: wine11;
+  }
+
+  .wine10 {
+    grid-area: wine10;
+  }
+
+  .wine9 {
+    grid-area: wine9;
+  }
+
+  .textsection6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+    gap: 1px 1px;
+    margin: auto;
+    width: 70vw;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    grid-template-areas: "Cttitle Cttitle""ct1 ct5""ct2 ct6""ct3 ct7""ct4 ct8";
+  }
+
+  .Cttitle {
+    grid-area: Cttitle;
+  }
+
+  .ct1 {
+    grid-area: ct1;
+  }
+
+  .ct2 {
+    grid-area: ct2;
+  }
+
+  .ct3 {
+    grid-area: ct3;
+  }
+
+  .ct4 {
+    grid-area: ct4;
+  }
+
+  .ct5 {
+    grid-area: ct5;
+  }
+
+  .ct6 {
+    grid-area: ct6;
+  }
+
+  .ct7 {
+    grid-area: ct7;
+  }
+
+  .ct8 {
+    grid-area: ct8;
+  }
+
+  .textsection7 {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    gap: 1px 1px;
+    margin: auto;
+    width: 70vw;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    grid-template-areas: "hjktitle hjktitle hjktitle""hjk1 hjk2 hkj3""hjk1 hjk4 hjk4";
+  }
+
+  .hjktitle {
+    grid-area: hjktitle;
+  }
+
+  .hjk1 {
+    grid-area: hjk1;
+  }
+
+  .hjk2 {
+    grid-area: hjk2;
+  }
+
+  .hkj3 {
+    grid-area: hkj3;
+  }
+
+  .textsection8 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr;
+    gap: 1px 1px;
+    margin: auto;
+    width: 70vw;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    grid-template-areas: "kdtitle kdtitle""kd1 kd3""kd2 kd4""kd5 kd5";
+  }
+
+  .kdtitle {
+    grid-area: kdtitle;
+  }
+
+  .kd1 {
+    grid-area: kd1;
+  }
+
+  .kd2 {
+    grid-area: kd2;
+  }
+
+  .kd3 {
+    grid-area: kd3;
+  }
+
+  .kd4 {
+    grid-area: kd4;
+  }
+
+  .kd5 {
+    grid-area: kd5;
+  }
+
+  .liststyling {
+    list-style-type: none;
+  }
+
+  .pricelistcoffee .price {
+    font-size: 0.83em;
+  }
+
+  .pricelistcoffee h5 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .coffeesection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "drk1 ep""drk2 am""drk3 mc""drk4 cl""drk5 cp""drk6 cm""drk7 cot""drk8 vc";
+    width: 50%;
+  }
+
+  .cdrink {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70vw;
+    margin: auto;
+  }
+
+  .ep {
+    grid-area: ep;
+  }
+
+  .am {
+    grid-area: am;
+  }
+
+  .mc {
+    grid-area: mc;
+  }
+
+  .cl {
+    grid-area: cl;
+  }
+
+  .cp {
+    grid-area: cp;
+  }
+
+  .cm {
+    grid-area: cm;
+  }
+
+  .cot {
+    grid-area: cot;
+  }
+
+  .vc {
+    grid-area: vc;
+  }
+
+  .drk1 {
+    grid-area: drk1;
+  }
+
+  .drk2 {
+    grid-area: drk2;
+  }
+
+  .drk3 {
+    grid-row: 4/5;
+  }
+
+  .drk4 {
+    grid-area: drk4;
+  }
+
+  .drk5 {
+    grid-area: drk5;
+  }
+
+  .drk6 {
+    grid-area: drk6;
+  }
+
+  .drk7 {
+    grid-area: drk7;
+  }
+
+  .drk8 {
+    grid-area: drk8;
+  }
+
+  .dish {
+    padding-top: 0px;
+    max-width: 75%;
+    text-align: center;
+    font-size: 18pt;
+    margin-top: 48px;
+  }
+
+  .price {
+    margin-top: 10px;
+    font-weight: bold;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .menutitles {
+    font-weight: bold;
+    font-size: 24pt;
+    padding-top: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .dessert1 {
+    grid-column: 1/3;
+  }
+
+  .dessert2 {
+    grid-column: 3/5;
+  }
+
+  .dessert3 {
+    grid-column: 5/7;
+  }
+
+  .dessert4 {
+    grid-column: 1/4;
+  }
+
+  .dessert5 {
+    grid-column: 4/7;
+  }
+
+  .vg1 {
+    grid-column: 1/2;
+  }
+
+  .vg2 {
+    grid-column: 2/3;
+  }
+
+  .vg3 {
+    grid-column: 3/4;
+  }
+
+  .vg4 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .vg5 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .vg6 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  .vg7 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .textsection10 {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "thetitle thetitle""the1 the2";
+    width: 70vw;
+    margin: auto;
+  }
+
+  .thetitle {
+    grid-area: thetitle;
+  }
+
+  .the1 {
+    grid-area: the1;
+  }
+
+  .the2 {
+    grid-area: the2;
+  }
+
+  /*menu desktop slutter her */
+  /*book bord desktop starter herunder */
+  .mainwrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10%;
+    padding-top: 0;
+  }
+
+  .arrangementerinside {
+    background-color: rgba(232, 161, 16, 0.5);
+    margin-left: 24px;
+    margin-right: 24px;
+    border-radius: 4px;
+    padding-top: 12px;
+  }
+
+  .arrangementerinside h3 {
+    margin: 0;
+  }
+
+  .theforkplugin h3 {
+    margin: 0;
+  }
+
+}
+
+/*                                                                        DESKTOP Slut                                              */ 
