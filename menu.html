@@ -11,6 +11,9 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.inview.min.js">
+
+  </script>
   <title>Menukort Cafeloppen</title>
   <meta name="title" content="Cafeloppen Christiania">
   <meta name="description" content="Se det store menukort inspireret af nordthailandske gadekøkkener">
@@ -52,22 +55,22 @@
   </div>
   <!-- Menu oversigt Mobile Scroll funktion Start-->
   <div id="categories">
-    <a class="categorystyling active" href="#1">Forårsruller</a>
-    <a class="categorystyling" href="#2">Forretter</a>
-    <a class="categorystyling" href="#3">Kokoskarry</a>
-    <a class="categorystyling" href="#4">Traditionel Wok</a>
-    <a class="categorystyling" href="#5">Stirfry</a>
-    <a class="categorystyling" href="#6">Små bidder</a>
-    <a class="categorystyling" href="#7">Desserter</a>
-    <a class="categorystyling" href="#8">Vegansk</a>
-    <a class="categorystyling" href="#9">Drikkevarer</a>
+    <a class="categorystyling forårsruller" href="#1">Forårsruller</a>
+    <a class="categorystyling forretter" href="#2">Forretter</a>
+    <a class="categorystyling kokoskarry" href="#3">Kokoskarry</a>
+    <a class="categorystyling traditionalwok" href="#4">Traditionel Wok</a>
+    <a class="categorystyling stirfry" href="#5">Stirfry</a>
+    <a class="categorystyling smallbites" href="#6">Små bidder</a>
+    <a class="categorystyling desserts" href="#7">Desserter</a>
+    <a class="categorystyling vegan" href="#8">Vegansk</a>
+    <a class="categorystyling drikkevarer" href="#9">Drikkevarer</a>
   </div>
   <!-- Menu oversigt Mobile Scroll funktion slut-->
   <div class="backplate">
   </div>
   <div class="menuitems">
     <div id="1" class="firstsection">
-      <img class="foodimg" src="img/rolls.png" alt="picture of spring rolls">
+      <img class="foodimg imgforårsruller" src="img/rolls.png" alt="picture of spring rolls">
       <h3 class="menutitles">Forårsruller</h3>
       <div class="textsection1">
         <div class="dish rollsitem1">
@@ -87,8 +90,8 @@
         </div>
       </div>
     </div>
-    <div id="2">
-      <img class="foodimg" src="img/forretter.png" alt="picture of appetizers">
+    <div id="2" class="scrollpd">
+      <img class="foodimg imgappetizer" src="img/forretter.png" alt="picture of appetizers">
       <h3 class="menutitles">Forretter</h3>
       <div class="textsection2">
         <div class="dish">
@@ -114,7 +117,7 @@
       </div>
     </div>
     <div id="3">
-      <img class="foodimg" src="img/kokoskarry.png" alt="picture of a curry dish">
+      <img class="foodimg imgkokoskarry" src="img/kokoskarry.png" alt="picture of a curry dish">
       <h3 class="menutitles">Kokoskarry</h3>
       <h4 class="menuheadersmall">Serveres med Jasminris</h4>
       <p class="choosebetween">Vælg mellem kylling, oksekød eller tofu til din ret<br>Med kongerejer eller and + 10kr</p>
@@ -142,7 +145,7 @@
       </div>
     </div>
     <div id="4">
-      <img class="foodimg" src="img/traditional.png" alt="picture of a traditional Wok dish">
+      <img class="foodimg imgtraditionalwok" src="img/traditional.png" alt="picture of a traditional Wok dish">
       <h3 class="menutitles">Traditionel Wok</h3>
       <h4 class="menuheadersmall">Serveres med Jasminris</h4>
       <div class="textsection1">
@@ -164,7 +167,7 @@
       </div>
     </div>
     <div id="5">
-      <img class="foodimg" src="img/stirfry.png" alt="picture of stirfry">
+      <img class="foodimg imgstirfry" src="img/stirfry.png" alt="picture of stirfry">
       <h3 class="menutitles">Stirfry</h3>
       <h4 class="menuheadersmall">Serveres med Jasminris</h4>
       <p class="choosebetween">Vælg mellem kylling, oksekød eller tofu til din ret<br>Med kongerejer eller and + 10kr</p>
@@ -187,7 +190,7 @@
       </div>
     </div>
     <div id="6">
-      <img class="foodimg" src="img/appetizers.png" alt="picture of stirfry">
+      <img class="foodimg imgsmallbites" src="img/appetizers.png" alt="picture of stirfry">
       <h3 class="menutitles">Små bidder</h3>
       <div class="textsection1">
         <div class="dish">
@@ -208,7 +211,7 @@
       </div>
     </div>
     <div id="7">
-      <img class="foodimg" src="img/appetizers.png" alt="picture of stirfry">
+      <img class="foodimg imgdesserts" src="img/appetizers.png" alt="picture of stirfry">
       <h3 class="menutitles">Desserter</h3>
       <div class="textsection3">
         <div class="dish dessert1">
@@ -239,7 +242,7 @@
       </div>
     </div>
     <div id="8">
-      <img class="foodimg" src="img/kokoskarry.png" alt="picture of stirfry">
+      <img class="foodimg imgvegan" src="img/kokoskarry.png" alt="picture of stirfry">
       <h3 class="menutitles">Vegansk</h3>
       <div class="textsection4">
         <div class="dish vg1">
@@ -280,7 +283,7 @@
       </div>
     </div>
     <div id="9">
-      <img class="foodimg" src="img/drikke.jpg" alt="picture of stirfry">
+      <img class="foodimg imgdrikkevarer" src="img/drikke.jpg" alt="picture of stirfry">
       <h3 class="menutitles">drikkevarer</h3>
       <div class="textsection5">
         <div class="dish wine1">

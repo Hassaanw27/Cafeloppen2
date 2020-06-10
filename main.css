@@ -7,7 +7,7 @@ body {
   margin: 0px;
 }
 
-/*                                                                        Mobile Start                                              */ 
+/*                                                                        Mobile Start                                              */
 
 body .logo {
   position: fixed;
@@ -176,7 +176,7 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
   height: 80px;
   color: red;
 }
- 
+
 
 .frontimgcontainer {
   width: 100vw;
@@ -205,7 +205,7 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
   text-align: center;
 }
 
-/* Skal slettes 
+/* Skal slettes
 .pure-material-button-contained {
   position: relative;
   display: inline-block;
@@ -307,7 +307,7 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
 .pure-material-button-contained:disabled::after {
   opacity: 0;
 }
- 
+
 /* Flaoter Book bord */
 .lftbtn {
   background-color: #E8A110;
@@ -321,6 +321,8 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
 .js-lftbtn {
   border-top: 1px solid grey;
 }
+
+
 
 /* Floater Menu */
 .rgtbtn {
@@ -802,12 +804,26 @@ h5 {
   background-color: none;
 }
 
+.activemenu {
+  background-color: #E8A110;
+  color: white;
+}
+
 .categorystyling2 {
   background-color: green;
 }
 
+.emptyspace{
+  width: 100vw;
+  height: 200px;
+}
+
 
 .foodimg {
+  width: 100%;
+}
+.scrollpd {
+  scroll-padding: 200px 0px 0px 0px;
   width: 100%;
 }
 
@@ -1075,7 +1091,7 @@ h5 {
 
 /*                                                                        Mobile Slut                                              */
 
-/*                                                                        DESKTOP START                                              */                     
+/*                                                                        DESKTOP START                                              */
 @media only screen and (min-width: 950px) {
   footer {
     display: grid;
@@ -1882,4 +1898,4 @@ h5 {
 
 }
 
-/*                                                                        DESKTOP Slut                                              */ 
+/*                                                                        DESKTOP Slut                                              */
