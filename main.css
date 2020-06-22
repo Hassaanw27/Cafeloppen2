@@ -8,7 +8,6 @@ body {
 }
 
 /*                                                                        Mobile Start                                              */
-
 body .logo {
   position: fixed;
   top: 30px;
@@ -21,28 +20,28 @@ body .logo {
   width: 150px;
   margin-top: -18px;
 }
-.cookietitle{
+
+.cookietitle {
   width: 70vw;
   margin: auto;
   padding: 48px 0px;
-
   font-family: 'Open Sans'
 }
 
-.cookiepolicy{
+.cookiepolicy {
   text-align: left;
   font-size: 10pt;
   font-weight: normal;
 }
 
 /* Genbrug af grid */
-.nowrap{
+.nowrap {
   width: 70vw;
   margin: auto;
   font-family: 'Open Sans';
-
 }
-.cookies h3{
+
+.cookies h3 {
   font-size: 12pt;
   margin: 0;
   font-weight: bold;
@@ -64,7 +63,6 @@ body .logo>span {
 body #navtoggle {
   visibility: hidden;
 }
-
 
 body #navtoggle+label {
   position: fixed;
@@ -88,7 +86,6 @@ body #navtoggle+label span {
 }
 
 /* Burger bar streger start */
-
 body #navtoggle+label span:first-child {
   top: 3px;
 }
@@ -117,9 +114,7 @@ body #navtoggle:checked+label span:last-child {
 }
 
 /* Burger bar streger Slut */
-
 /* Burger bar åben start */
-
 body #navtoggle~.navbg {
   background: #fff8e9;
   position: fixed;
@@ -141,8 +136,8 @@ body #navtoggle~.navbg>.ulist {
   right: 20%;
   padding: 0;
 }
-/* Burger bar åben slut */
 
+/* Burger bar åben slut */
 /* Burger bar baggrund animation start */
 body #navtoggle~.navbg>.ulist>.listitem {
   opacity: 0;
@@ -171,13 +166,11 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
 }
 
 /* Burger bar baggrund animation Slut */
-
 /* Skubber forside elementer ned så man kan se billedet */
 .topbar {
   height: 80px;
   color: red;
 }
-
 
 .frontimgcontainer {
   width: 100vw;
@@ -185,18 +178,25 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
   position: absolute;
   top: 0;
   margin: 0;
-  background-image: url('img/frontimage.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  overflow: hidden;
+}
+
+.deskvid {
+  display: none;
+}
+
+.mobilevid {
+  display: block;
+  width: 100vw;
 }
 
 .fronttext {
+  position: absolute;
+  top: 200px;
+  width: 100%;
   color: white;
   font-family: 'Open Sans';
   font-weight: normal;
-  margin-top: 250px;
-  padding: 48px 24px;
   font-size: 20pt;
   text-align: center;
 }
@@ -209,14 +209,6 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
 .nav {
   display: none;
 }
-
-
-
-
-
-
-
-
 
 /* Flaoter Book bord */
 .lftbtn {
@@ -231,8 +223,6 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
 .js-lftbtn {
   border-top: 1px solid grey;
 }
-
-
 
 /* Floater Menu */
 .rgtbtn {
@@ -249,7 +239,6 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
   border-top: 1px solid grey;
 }
 
-
 /* Flaoter Book Bord*/
 .bordbooking {
   color: white;
@@ -261,7 +250,6 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
 }
 
 /* Flaoter menu*/
-
 .takeaway {
   color: black;
   text-decoration: none;
@@ -297,14 +285,12 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
   font-size: 12pt;
 }
 
-.sheetsstyling{
+.sheetsstyling {
   font-family: 'Open Sans';
   margin: 12px 0px;
 }
+
 /* Google Sheets Blog Slut*/
-
-
-
 /* Baggrunds farve */
 .red {
   background-color: #fffff0;
@@ -326,7 +312,10 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
 }
 
 .btn {
+  position: absolute;
   text-align: center;
+  width: 100%;
+  bottom: 80px;
 }
 
 footer {
@@ -442,7 +431,7 @@ footer {
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-  top: 280px  !important;
+  top: 280px !important;
 }
 
 .swiper-slide {
@@ -564,7 +553,7 @@ p {
 
 .maintitle {
   font-family: 'Open Sans';
-  margin-bottom: 48px;
+  margin-top: 12px;
   font-size: 36pt;
   text-align: center;
 }
@@ -580,7 +569,6 @@ h5 {
   margin: 0;
 }
 
-
 .pricelistcoffee h5 {
   margin-top: 0px;
   margin-bottom: 10px;
@@ -593,12 +581,14 @@ h5 {
   gap: 1px 1px;
   grid-template-areas: "drk1 ep""drk2 am""drk3 mc""drk4 cl""drk5 cp""drk6 cm""drk7 cot""drk8 vc";
 }
+
 .sectiontitle {
   font-size: 14pt;
   margin-top: 84px;
   text-decoration: underline;
-  text-transform:  uppercase;
+  text-transform: uppercase;
 }
+
 .liststyling {
   list-style-type: none;
   font-size: 12pt;
@@ -611,7 +601,6 @@ h5 {
 }
 
 /* Drikke vare forkortelser (ep=Espresso)*/
-
 .ep {
   grid-area: ep;
 }
@@ -676,11 +665,6 @@ h5 {
   grid-area: drk8;
 }
 
-
-
-
-
-
 .dish {
   padding-top: 0px;
   max-width: 75%;
@@ -700,6 +684,7 @@ h5 {
   margin-top: 0;
   margin-bottom: 10px;
 }
+
 #categories {
   height: 120px;
   width: 100%;
@@ -744,15 +729,16 @@ h5 {
   background-color: green;
 }
 
-.emptyspace{
+.emptyspace {
   width: 100vw;
   height: 200px;
 }
 
-
 .foodimg {
+  padding-top: 20px;
   width: 100%;
 }
+
 .scrollpd {
   scroll-padding: 200px 0px 0px 0px;
   width: 100%;
@@ -953,30 +939,29 @@ h5 {
 
 /*OM OS slutter her*/
 /*booking starter her*/
+.forbestillingsektion {
+  display: flex;
+  background-color: rgba(232, 161, 16, 0.5);
+  font-family: 'Open Sans';
+  text-align: center;
+  border-radius: 4px;
+  padding-top: 12px;
+  height: 400px;
+}
 
-.forbestillingsektion{
-    display: flex;
-    background-color: rgba(232, 161, 16, 0.5);
-    font-family: 'Open Sans';
-    text-align: center;
-    border-radius: 4px;
-    padding-top: 12px;
-    height: 400px;
-  }
+.remove {
+  margin-top: 0;
+}
 
-  .remove{
-    margin-top: 0;
-  }
+.aboutus br:nth-child(1) {
+  display: none;
+}
 
-  .aboutus br:nth-child(1){
-    display: none;
-  }
-
-  .arrangementerinside{
-    align-self: center;
-    margin: auto;
-    padding-bottom: 12px;
-  }
+.arrangementerinside {
+  align-self: center;
+  margin: auto;
+  padding-bottom: 12px;
+}
 
 /* Email */
 .emcontact {
@@ -998,7 +983,6 @@ h5 {
 }
 
 /* Email formular*/
-
 .nameinput, .emailinput, .phoneinput {
   width: 90%;
   border: 1px solid lightgrey;
@@ -1023,6 +1007,7 @@ h5 {
 .widesection {
   display: block;
 }
+
 /* Floater i bunden på alle sider */
 .sticky {
   position: fixed;
@@ -1040,17 +1025,16 @@ h5 {
   display: inline-flex;
 }
 
-.block{
+.block {
   display: block;
 }
 
-.socialicons{
-
+.socialicons {
   margin: auto;
   padding-bottom: 48px;
 }
 
-.socialicons img{
+.socialicons img {
   width: 40%;
 }
 
@@ -1065,6 +1049,7 @@ h5 {
   border-radius: 4px;
   display: flex;
 }
+
 section .aboutuscat {
   width: 80%;
   font-weight: lighter;
@@ -1073,16 +1058,23 @@ section .aboutuscat {
   margin: auto;
 }
 
-textarea::placeholder{
+textarea::placeholder {
   font-family: sans-serif;
 }
+
 .the2 {
   grid-area: the2;
   margin-bottom: 84px;
 }
 
-/*                                                                        Mobile Slut                                              */
+#nine {}
 
+.imgspace {
+  width: 100%;
+  height: 200px;
+}
+
+/*                                                                        Mobile Slut                                              */
 /*                                                                        DESKTOP START                                              */
 @media only screen and (min-width: 950px) {
   footer {
@@ -1097,7 +1089,6 @@ textarea::placeholder{
     display: none;
   }
 
-
   /* Burger baren Skjules på desktop */
   .ulist, .listitem {
     display: none;
@@ -1108,13 +1099,16 @@ textarea::placeholder{
   }
 
   .fronttext {
+    position: absolute;
+    width: 100%;
     color: white;
     font-family: 'Open Sans';
     font-weight: normal;
-    margin-top: 250px;
-    padding: 48px 24px;
+    margin: auto;
+    padding: 0;
     font-size: 48pt;
     text-align: center;
+    top: 300px;
   }
 
   .nav {
@@ -1155,8 +1149,6 @@ textarea::placeholder{
     color: red;
   }
 
-
-
   body .logo {}
 
   body #navtoggle~.navbg {
@@ -1187,7 +1179,6 @@ textarea::placeholder{
     grid-column: 1/3;
     margin: 20px 50px 20px 20px;
     justify-self: center;
-
   }
 
   .spacer {
@@ -1200,6 +1191,7 @@ textarea::placeholder{
     justify-self: center;
     align-self: center;
     margin-bottom: 48px;
+    height: 400px;
   }
 
   .slideshow div {
@@ -1210,13 +1202,25 @@ textarea::placeholder{
     width: 100vw;
     height: 800px;
     position: absolute;
+    overflow: hidden;
     top: 0;
     margin: 0;
-    background-image: url('img/frontimage.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-attachment: fixed;
+  }
+
+  .deskvid {
+    min-width: 100%;
+    top: 140px;
+    height: auto;
+    display: block;
+  }
+
+  .mobilevid {
+    display: none;
+    width: 100vw;
+  }
+
+  .frontsubcont {
+    height: auto;
   }
 
   .start {
@@ -1233,19 +1237,22 @@ textarea::placeholder{
     font-weight: bold;
     text-transform: uppercase;
     font-size: 16pt;
+    z-index: 200;
   }
 
   .btn {
-    padding-top: 100px;
-    bottom: 100px;
+    position: absolute;
     text-align: center;
+    width: 100%;
+    bottom: 80px;
   }
 
   .slideshowimages {
     width: 100%;
     padding-bottom: 18px;
   }
-/* Prikker under galleri */
+
+  /* Prikker under galleri */
   .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     top: 385px !important;
   }
@@ -1258,8 +1265,6 @@ textarea::placeholder{
     padding-bottom: 24px;
     margin-top: 0px;
   }
-
-
 
   .sitemap-links {
     display: grid;
@@ -1413,9 +1418,7 @@ textarea::placeholder{
     padding: 24px;
     grid-column: 1/2;
     margin: auto;
-
   }
-
 
   .udfyld {
     width: 80%;
@@ -1460,7 +1463,6 @@ textarea::placeholder{
   }
 
   /* Kategori baggrund */
-
   .backplate {
     display: none;
   }
@@ -1636,7 +1638,6 @@ textarea::placeholder{
   }
 
   .hjktitle {
-
     grid-area: hjktitle;
   }
 
@@ -1895,7 +1896,7 @@ textarea::placeholder{
     padding-top: 0;
   }
 
-.forbestillingsektion{
+  .forbestillingsektion {
     display: flex;
     background-color: rgba(232, 161, 16, 0.5);
     font-family: 'Open Sans';
@@ -1918,28 +1919,30 @@ textarea::placeholder{
     margin: 0;
   }
 
-  .theforkplugin{
+  .theforkplugin {
     width: 80%;
     margin: auto;
   }
 
-  .socialicons{
+  .socialicons {
     grid-row: 1/2;
     grid-column: 5/6;
     text-align: center;
     padding-bottom: 0;
   }
-  .socialicons img{
+
+  .socialicons img {
     width: 48px;
   }
 
-  .fødevarestyrelsen{
+  .fødevarestyrelsen {
     width: auto;
     grid-row: 1/2;
     grid-column: 5/6;
     text-align: center;
     padding-top: 24px;
   }
+
   body .logo {
     position: fixed;
     top: 30px;
