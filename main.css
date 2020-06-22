@@ -188,6 +188,7 @@ body #navtoggle:checked~.navbg>.ulist>.listitem {
 .mobilevid {
   display: block;
   width: 100vw;
+  margin-bottom: 48px;
 }
 
 .fronttext {
@@ -1006,6 +1007,7 @@ h5 {
 
 .widesection {
   display: block;
+  padding-top: 24px;
 }
 
 /* Floater i bunden på alle sider */
@@ -1216,7 +1218,7 @@ textarea::placeholder {
 
   .mobilevid {
     display: none;
-    width: 100vw;
+
   }
 
   .frontsubcont {
